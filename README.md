@@ -15,126 +15,121 @@
 
 
 TASK 1 : API-INTEGRATION-AND-DATA-VISUALIZATION
+Introduction
 
--Project Description
+This project has been developed as part of the CODTECH Python Programming Internship. The objective of this task is to demonstrate API Integration and Data Visualization using Python. The project involves fetching real-time weather forecast data from an external API and visualizing the data in a clear and meaningful way.
 
-This project focuses on **API Integration and Data Visualization** using Python. The application integrates with the **OpenWeatherMap API** to fetch real-time weather forecast data for a selected city (Delhi) and visualizes key weather parameters such as **temperature, humidity, and atmospheric pressure** using graphical charts.
+For this implementation, the OpenWeatherMap API has been integrated to retrieve weather forecast information for the city of Delhi. The retrieved data includes temperature, humidity, and atmospheric pressure, which are then processed and visualized using Python data visualization libraries.
 
-The purpose of this task is to demonstrate how external REST APIs can be accessed programmatically, how JSON data can be processed and structured using data analysis tools, and how meaningful insights can be presented through clear and effective visualizations.
+API integration and data visualization are essential skills in modern software development and data analytics, as they enable applications to work with live data and present insights in an understandable graphical format.
 
-- Objectives
+Objective
 
-* Integrate a third-party API using Python
-* Fetch real-time weather forecast data
-* Process and structure API response data
-* Perform basic data handling using pandas
-* Visualize weather data using Matplotlib and Seaborn
-* Create a simple weather dashboard
+The main objectives of this task are:
 
-- API Used
+To understand how to integrate third-party APIs using Python
 
-**OpenWeatherMap – 5 Day / 3 Hour Forecast API**
+To fetch real-time weather forecast data from an external source
 
-* Provides weather forecast data in 3-hour intervals
-* Returns data in JSON format
-* Widely used in real-world weather applications
+To process and structure JSON data efficiently
 
-**API Endpoint:**
+To perform data manipulation using pandas
 
-```
-https://api.openweathermap.org/data/2.5/forecast
-```
+To visualize multiple data parameters using charts
 
-**Parameters Used:**
+To build a simple weather data visualization dashboard
 
-* `q` → City name (Delhi)
-* `appid` → API key
-* `units` → Metric (Celsius)
+Tools and Technologies Used
 
-- Technologies Used
+The following tools and libraries were used to complete this task:
 
-* **Python**
-* **Requests** – For API communication
-* **Pandas** – For data processing and manipulation
-* **Matplotlib** – For plotting graphs
-* **Seaborn** – For styling visualizations
+Python as the primary programming language
 
--How the Project Works
+Requests library for API integration and data fetching
 
-1. The program sends a request to the OpenWeatherMap API using the `requests` library.
-2. The API responds with weather forecast data in JSON format.
-3. Important weather parameters are extracted from the response:
+Pandas for data processing and manipulation
 
-   * Date & Time
-   * Temperature (°C)
-   * Humidity (%)
-   * Atmospheric Pressure (hPa)
-4. The extracted data is stored in a pandas DataFrame.
-5. The DateTime column is converted to a datetime format for accurate plotting.
-6. The data is visualized using three separate line graphs arranged in a single dashboard.
+Matplotlib for creating data visualizations
 
-- Data Visualization
+Seaborn for enhancing plot styling
 
-The project generates a **three-plot weather dashboard**:
+Visual Studio Code / Jupyter Notebook for code execution and testing
 
-- Temperature Forecast
+Dataset Description
 
-* Displays temperature variations over time
-* Represented using a red line plot
-* Helps identify daily temperature trends
+The dataset used in this project is real-time weather forecast data fetched directly from the OpenWeatherMap API. The API provides forecast information at 3-hour intervals for 5 days.
 
-- Humidity Forecast
+The following weather parameters are extracted from the API response:
 
-* Displays humidity percentage changes
-* Represented using a blue line plot
-* Useful for understanding atmospheric moisture levels
+Date and Time
 
-- Pressure Forecast
+Temperature (in Celsius)
 
-* Displays atmospheric pressure variations
-* Represented using a green line plot
-* Indicates weather stability or changes
+Humidity (in percentage)
 
-All plots share a common Date & Time axis, allowing easy comparison of weather parameters.
+Atmospheric Pressure (in hPa)
 
----
+The data is returned in JSON format and converted into a structured pandas DataFrame for easy analysis and visualization.
 
-- Output
+API Integration and Implementation
 
-The final output is a **graphical dashboard** showing:
+The project begins by sending an HTTP GET request to the OpenWeatherMap Forecast API using the requests library. The API request includes the city name, API key, and unit type (metric).
 
-* Temperature (°C)
-* Humidity (%)
-* Pressure (hPa)
+Once the response is received, the program verifies the request status. If the request is successful, the JSON response is parsed, and the required weather attributes are extracted. These values are stored in a list of dictionaries and later converted into a pandas DataFrame.
 
-across multiple forecast timestamps for the city of Delhi.
+The DateTime field is converted into a datetime format to ensure accurate time-series visualization. This structured data is then used for creating graphical plots.
 
-The output is displayed using Matplotlib and matches the provided screenshot.
+Data Visualization
 
----
+The visualization dashboard consists of three line charts, each representing a different weather parameter:
 
-- How to Run the Project
+Temperature Forecast
 
-1. Install required libraries:
+Displays temperature variation over time
 
-```bash
-pip install requests pandas matplotlib seaborn
-```
+Represented using a red line plot
 
-2. Replace the API key in the code with your own OpenWeatherMap API key.
+Helps analyze daily temperature trends
 
-3. Run the Python script:
+Humidity Forecast
 
-```bash
-python weather_dashboard.py
-```
+Displays humidity percentage changes
 
-4. The weather visualization dashboard will be displayed on the screen.
+Represented using a blue line plot
 
-- Conclusion
+Useful for understanding moisture levels
 
-This project successfully demonstrates **API Integration and Data Visualization** by combining real-time weather data with Python-based visualization tools. It highlights how external APIs can be used to fetch live data, process it efficiently, and present it in an understandable visual format. This task is a practical example of real-world data handling and visualization techniques used in modern applications.
+Pressure Forecast
 
+Displays atmospheric pressure variations
 
+Represented using a green line plot
+
+Indicates weather stability and changes
+
+All charts share a common Date & Time axis, making it easy to compare trends across different weather parameters. The visual output matches the provided screenshot.
+
+Results and Output
+
+The project successfully fetches real-time weather forecast data and visualizes it in an interactive dashboard format. The output displays clear trends for temperature, humidity, and pressure over multiple timestamps.
+
+A screenshot of the generated visualization has been included in the repository to verify the output and demonstrate successful execution of the program.
+
+Deliverables
+
+The following files are included in this repository:
+
+weather_dashboard.py
+Python script containing API integration, data processing, and visualization logic.
+
+output_screenshot.png
+Screenshot showing the weather forecast visualization dashboard.
+
+README.md
+Documentation describing the task, implementation, and results.
+
+Conclusion
+
+This project successfully demonstrates API Integration and Data Visualization using Python. It provides hands-on experience with working on real-time data obtained from an external API, processing structured JSON data, and presenting insights through graphical visualization. The task fulfills the requirements of the CODTECH Python Programming Internship and highlights the practical application of APIs and data visualization techniques in real-world scenarios.
 
 *OUTPUT*: <img width="1919" height="1018" alt="Image" src="https://github.com/user-attachments/assets/f9202c90-a71b-4ebc-88ff-9ba8f38df4ca" />
