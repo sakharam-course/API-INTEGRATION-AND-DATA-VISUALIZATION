@@ -12,61 +12,129 @@
 
 *MENTOR*: NEELA SANTHOSH
 
-📧 Task 4: Spam Email Classification using Machine Learning
-📌 Introduction
 
-This project has been developed as part of the CODTECH Python Programming Internship. Task 4 focuses on implementing a predictive machine learning model using Scikit-learn to classify text-based data. In this task, a Spam Email Classification System is created to determine whether a given email message is Spam or Not Spam (Ham).
-Spam detection is one of the most common and practical applications of machine learning in real-world systems. It plays a crucial role in enhancing email security, improving user experience, and protecting users from fraudulent or unwanted content. This project provides hands-on exposure to building a complete machine learning pipeline for text classification.
-The task aims to strengthen understanding of supervised learning concepts and the practical use of machine learning libraries in Python.
 
-🎯 Objective
+TASK 1 : API-INTEGRATION-AND-DATA-VISUALIZATION
 
-The main objectives of this task are:
-To understand the fundamentals of supervised machine learning
-To implement a text classification model using Scikit-learn
-To convert raw text data into numerical features suitable for machine learning models
-To train and evaluate a classification algorithm
-To test the trained model using new and unseen email messages
-To gain practical experience with an end-to-end machine learning workflow
+-Project Description
 
-🛠️ Tools and Technologies Used
+This project focuses on **API Integration and Data Visualization** using Python. The application integrates with the **OpenWeatherMap API** to fetch real-time weather forecast data for a selected city (Delhi) and visualizes key weather parameters such as **temperature, humidity, and atmospheric pressure** using graphical charts.
 
-The following tools and technologies were used in this project:
-Python – for implementing the machine learning logic
-Pandas – for creating, managing, and preprocessing the dataset
-Scikit-learn – for model training, evaluation, and prediction
-CountVectorizer – for transforming text data into numerical feature vectors
-Multinomial Naive Bayes – as the classification algorithm
-Jupyter Notebook – for interactive coding and result visualization
+The purpose of this task is to demonstrate how external REST APIs can be accessed programmatically, how JSON data can be processed and structured using data analysis tools, and how meaningful insights can be presented through clear and effective visualizations.
 
-📊 Dataset Description
+- Objectives
 
-A small text-based dataset was created for demonstration purposes. The dataset consists of short email messages labeled as either spam or ham.
-Spam emails include promotional, prize-related, or suspicious messages.
-Ham emails represent normal, personal, or informational messages.
-The textual labels are converted into numerical values so that the machine learning model can process them effectively. This dataset serves as a simple but effective example for understanding text classification.
+* Integrate a third-party API using Python
+* Fetch real-time weather forecast data
+* Process and structure API response data
+* Perform basic data handling using pandas
+* Visualize weather data using Matplotlib and Seaborn
+* Create a simple weather dashboard
 
-⚙️ Model Implementation
+- API Used
 
-The implementation follows a structured machine learning workflow:
-The dataset is loaded into a Pandas DataFrame
-The data is split into training and testing sets to evaluate model performance
-Since machine learning models cannot directly process text, CountVectorizer is used to convert text into numerical features based on word frequency
-A Multinomial Naive Bayes classifier is trained using the vectorized training data
-Multinomial Naive Bayes is particularly suitable for text classification tasks due to its simplicity, efficiency, and strong performance with word-count features.
-After training, the model is evaluated using:
-Accuracy Score
-Classification Report
-These metrics help assess how well the model performs on unseen data.
+**OpenWeatherMap – 5 Day / 3 Hour Forecast API**
 
-📈 Results and Output
+* Provides weather forecast data in 3-hour intervals
+* Returns data in JSON format
+* Widely used in real-world weather applications
 
-The trained model successfully classifies email messages as spam or not spam with good accuracy on the sample dataset. The Jupyter Notebook displays evaluation metrics and prediction results in a clear and understandable format.
-Additionally, the model is tested using a custom email message, demonstrating its ability to make real-time predictions. An output screenshot has been included in the repository to showcase the final results.
+**API Endpoint:**
 
-✅ Conclusion
+```
+https://api.openweathermap.org/data/2.5/forecast
+```
 
-This task demonstrates the practical application of machine learning concepts for text classification using Scikit-learn. It provides hands-on experience in data preparation, feature extraction, model training, evaluation, and prediction.
-The project successfully fulfills the requirements of Task 4 of the CODTECH Python Programming Internship and serves as a foundational example of implementing a spam detection system using machine learning in Python.
+**Parameters Used:**
+
+* `q` → City name (Delhi)
+* `appid` → API key
+* `units` → Metric (Celsius)
+
+- Technologies Used
+
+* **Python**
+* **Requests** – For API communication
+* **Pandas** – For data processing and manipulation
+* **Matplotlib** – For plotting graphs
+* **Seaborn** – For styling visualizations
+
+-How the Project Works
+
+1. The program sends a request to the OpenWeatherMap API using the `requests` library.
+2. The API responds with weather forecast data in JSON format.
+3. Important weather parameters are extracted from the response:
+
+   * Date & Time
+   * Temperature (°C)
+   * Humidity (%)
+   * Atmospheric Pressure (hPa)
+4. The extracted data is stored in a pandas DataFrame.
+5. The DateTime column is converted to a datetime format for accurate plotting.
+6. The data is visualized using three separate line graphs arranged in a single dashboard.
+
+- Data Visualization
+
+The project generates a **three-plot weather dashboard**:
+
+- Temperature Forecast
+
+* Displays temperature variations over time
+* Represented using a red line plot
+* Helps identify daily temperature trends
+
+- Humidity Forecast
+
+* Displays humidity percentage changes
+* Represented using a blue line plot
+* Useful for understanding atmospheric moisture levels
+
+- Pressure Forecast
+
+* Displays atmospheric pressure variations
+* Represented using a green line plot
+* Indicates weather stability or changes
+
+All plots share a common Date & Time axis, allowing easy comparison of weather parameters.
+
+---
+
+- Output
+
+The final output is a **graphical dashboard** showing:
+
+* Temperature (°C)
+* Humidity (%)
+* Pressure (hPa)
+
+across multiple forecast timestamps for the city of Delhi.
+
+The output is displayed using Matplotlib and matches the provided screenshot.
+
+---
+
+- How to Run the Project
+
+1. Install required libraries:
+
+```bash
+pip install requests pandas matplotlib seaborn
+```
+
+2. Replace the API key in the code with your own OpenWeatherMap API key.
+
+3. Run the Python script:
+
+```bash
+python weather_dashboard.py
+```
+
+4. The weather visualization dashboard will be displayed on the screen.
+
+- Conclusion
+
+This project successfully demonstrates **API Integration and Data Visualization** by combining real-time weather data with Python-based visualization tools. It highlights how external APIs can be used to fetch live data, process it efficiently, and present it in an understandable visual format. This task is a practical example of real-world data handling and visualization techniques used in modern applications.
+
+
 
 *OUTPUT*: <img width="1919" height="1018" alt="Image" src="https://github.com/user-attachments/assets/f9202c90-a71b-4ebc-88ff-9ba8f38df4ca" />
