@@ -85,7 +85,7 @@ All charts share a common Date & Time axis, making it easy to compare trends acr
 The project successfully fetches real-time weather forecast data and visualizes it in an interactive dashboard format. The output displays clear trends for temperature, humidity, and pressure over multiple timestamps.=
 A screenshot of the generated visualization has been included in the repository to verify the output and demonstrate successful execution of the program.
 
--Deliverables
+- Deliverables
 
 The following files are included in this repository:
 
