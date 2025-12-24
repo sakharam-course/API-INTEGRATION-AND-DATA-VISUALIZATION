@@ -13,15 +13,12 @@
 *MENTOR*: NEELA SANTHOSH
 
 
-
 TASK 1 : API-INTEGRATION-AND-DATA-VISUALIZATION
 
 Introduction
 
 This project has been developed as part of the CODTECH Python Programming Internship. The objective of this task is to demonstrate API Integration and Data Visualization using Python. The project involves fetching real-time weather forecast data from an external API and visualizing the data in a clear and meaningful way.
-
 For this implementation, the OpenWeatherMap API has been integrated to retrieve weather forecast information for the city of Delhi. The retrieved data includes temperature, humidity, and atmospheric pressure, which are then processed and visualized using Python data visualization libraries.
-
 API integration and data visualization are essential skills in modern software development and data analytics, as they enable applications to work with live data and present insights in an understandable graphical format.
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -29,12 +26,12 @@ API integration and data visualization are essential skills in modern software d
 Objective
 
 The main objectives of this task are:
--To understand how to integrate third-party APIs using Python
--To fetch real-time weather forecast data from an external source
--To process and structure JSON data efficiently
--To perform data manipulation using pandas
--To visualize multiple data parameters using charts
--To build a simple weather data visualization dashboard
+- To understand how to integrate third-party APIs using Python
+- To fetch real-time weather forecast data from an external source
+- To process and structure JSON data efficiently
+- To perform data manipulation using pandas
+- To visualize multiple data parameters using charts
+- To build a simple weather data visualization dashboard
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
