@@ -15,7 +15,6 @@
 
 
 TASK 1 : API-INTEGRATION-AND-DATA-VISUALIZATION
-
 - Introduction
 
 This project has been developed as part of the CODTECH Python Programming Internship. The objective of this task is to demonstrate API Integration and Data Visualization using Python. The project involves fetching real-time weather forecast data from an external API and visualizing the data in a clear and meaningful way.
